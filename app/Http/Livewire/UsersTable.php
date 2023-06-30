@@ -31,17 +31,16 @@ class UsersTable extends Component
         ->paginate(5)
     ]);
     }
-    public function setOrderField( string $name)
+    public function setOrderField(string $name)
     {
         if($name === $this->orderField)
         {
-            //reset pour initialisée la propriété à sa valeur de départ!!
-            $this->orderDirection  = $this->orderDirection == 'ASC' ? 'DESC' : 'ASC';
+            //reset pour initialiser la propriété à sa valeur de départ!!
+            $this->orderDirection  = $this->orderDirection === 'ASC' ? 'DESC' : 'ASC';
         }else
-        { 
+        {
             $this->orderField = $name;
             $this->reset('orderDirection');
-            $this->orderDirection = 'ASC';
         }
     }
 }
