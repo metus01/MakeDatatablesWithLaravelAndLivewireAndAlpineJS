@@ -1,4 +1,4 @@
-<td colspan="5">
+<td colspan="6">
     <form  wire:submit.prevent="save" action="" method="post">
         <div wire:loading>Chargement...</div>
         <div class="mb-3">

@@ -10,6 +10,7 @@ class UsersTable extends Component
 {
     // use WithPagination;
     // public $users = [];
+    public array $selection = [];
     protected $listeners = [
         'userUpdated' => 'onUserUpdated'
     ];
@@ -51,4 +52,15 @@ class UsersTable extends Component
             $this->reset('orderDirection');
         }
     }
+    public function onUserUpdated()
+    {
+        $this->reset('editId');
+    }
+    // public function updating($name , $value)
+    // {
+    //     if($name === 'search')
+    //     {
+    //         $this->resetPage();
+    //     }
+    // }
 }

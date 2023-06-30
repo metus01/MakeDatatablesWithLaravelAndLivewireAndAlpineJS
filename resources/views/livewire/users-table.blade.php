@@ -1,10 +1,12 @@
 <div>
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
+
     <nav class="navbar bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
         </div>
     </nav>
+    @dump($selection)
     <div class="container">
         <input class=" mt-4 mb-4 form-control" placeholder="Rechercher" type="text" wire:model.debounce.500ms='search'>
     </div>
@@ -22,6 +24,11 @@
             <tbody>
                 @foreach ($users as $user)
                     <tr>
+                        <td>
+                            <input type="checkbox" name="" id=""
+                            wire:model="selection"
+                            value="{{ $user->id }}">
+                        </td>
                         <td class="text text-center">{{ $user->name }}</td>
                         <td class="text text-center">{{ $user->title }}</td>
                         <td class="text text-center">{{ $user->online }}</td>
