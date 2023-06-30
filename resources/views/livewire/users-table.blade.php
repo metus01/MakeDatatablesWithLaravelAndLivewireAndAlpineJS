@@ -32,9 +32,7 @@
                         </td>
                     </tr>
                     @if($editId == $user->id)
-                    <tr>
-                        <td colspan="5">Editer</td>
-                    </tr>
+                    <livewire:user-form :user="$user" :key="$user->id"></livewire:user-form>
                     @endif
                 @endforeach
             </tbody>
