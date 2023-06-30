@@ -13,11 +13,13 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th class="text text-center" wire:click="setOrderField('name')">Name</th>
+                 <x-table-header
+                 :direction="$orderDirection" label="Name" name="name" :field="$orderField">
+                 </x-table-header>
                     <th wire:click="setOrderField('title')" class="text text-center">Title</th>
                     <th wire:click="setOrderField('online')">Statut</th>
                     <th>Rôle</th>
-                    <th  class="text text-end">Actions</th>
+                    <th class="text text-end">Actions</th>
                 </tr>
             </thead>
             <tbody>

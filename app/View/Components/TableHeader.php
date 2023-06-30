@@ -14,7 +14,7 @@ class TableHeader extends Component
 
     public function __construct( public string $direction , public string $name , public string $label , public string $field)
     {
-
+        
     }
 
     /**

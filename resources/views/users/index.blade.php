@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>User</title>
     <link rel="stylesheet" href="{{ asset('css/pulse.css') }}">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     @livewireStyles
 </head>
 <body>

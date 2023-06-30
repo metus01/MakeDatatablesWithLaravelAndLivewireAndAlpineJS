@@ -38,7 +38,7 @@ class UsersTable extends Component
             //reset pour initialisée la propriété à sa valeur de départ!!
             $this->orderDirection  = $this->orderDirection == 'ASC' ? 'DESC' : 'ASC';
         }else
-        {
+        { 
             $this->orderField = $name;
             $this->reset('orderDirection');
             $this->orderDirection = 'ASC';
