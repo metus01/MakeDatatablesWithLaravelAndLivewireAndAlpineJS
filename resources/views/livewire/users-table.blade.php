@@ -13,9 +13,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                 <x-table-header
-                 :direction="$orderDirection" label="Name" name="name" :field="$orderField">
-                 </x-table-header>
+                    <th wire:click="setOrderField('name')" class="text text-center">Name</th>
                     <th wire:click="setOrderField('title')" class="text text-center">Title</th>
                     <th wire:click="setOrderField('online')">Statut</th>
                     <th>Rôle</th>
@@ -30,9 +28,15 @@
                         <td class="text text-center">{{ $user->online }}</td>
                         <td class="text text-center">{{ $user->role }}</td>
                         <td>
-                            <button class="btn btn-primary">Editer</button>
+                            <button
+                            wire:click="startEdit({{ $user->id }})" class="btn btn-primary">Editer</button>
                         </td>
                     </tr>
+                    @if ($editId = $user->id)
+                    <tr>
+                        <td colspan="5">Editer</td>
+                    </tr>
+                    @endif
                 @endforeach
             </tbody>
         </table>

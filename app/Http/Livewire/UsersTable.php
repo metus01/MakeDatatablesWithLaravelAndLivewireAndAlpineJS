@@ -10,6 +10,7 @@ class UsersTable extends Component
 {
     // use WithPagination;
     // public $users = [];
+    public int $editId = 0;
     public string $search  = '';
 
     protected $queryString = [
@@ -31,12 +32,16 @@ class UsersTable extends Component
         ->paginate(5)
     ]);
     }
+    public function startEdit(int $id)
+    {
+        
+    }
     public function setOrderField(string $name)
     {
         if($name === $this->orderField)
         {
             //reset pour initialiser la propriété à sa valeur de départ!!
-            $this->orderDirection  = $this->orderDirection === 'ASC' ? 'DESC' : 'ASC';
+            $this->orderDirection  = $this->orderDirection == 'ASC' ? 'DESC' : 'ASC';
         }else
         {
             $this->orderField = $name;
