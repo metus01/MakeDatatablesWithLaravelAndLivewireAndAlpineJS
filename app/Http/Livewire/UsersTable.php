@@ -10,6 +10,9 @@ class UsersTable extends Component
 {
     // use WithPagination;
     // public $users = [];
+    protected $listeners = [
+        'userUpdated' => 'onUserUpdated'
+    ];
     public int $editId = 0;
     public string $search  = '';
 

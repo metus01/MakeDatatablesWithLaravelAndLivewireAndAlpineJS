@@ -10,6 +10,6 @@
             </div>
             @enderror
         </div>
-        <button class="btn btn-success">Sauvegarder</button>
+        <button class="btn btn-success"  wire:loading.attr='disabled'>Sauvegarder</button>
     </form>
 </td>

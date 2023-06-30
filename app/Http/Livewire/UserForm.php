@@ -14,8 +14,9 @@ class UserForm extends Component
     ];
     public function save()
     {
-        sleep(3);
         $this->validate();
+        $this->user->save();
+        $this->emit('userUpdated');
     }
     public function render()
     {
