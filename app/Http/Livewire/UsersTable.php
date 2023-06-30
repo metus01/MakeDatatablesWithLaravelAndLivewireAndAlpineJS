@@ -55,6 +55,7 @@ class UsersTable extends Component
     public function onUserUpdated()
     {
         $this->reset('editId');
+        session()->flash('success' , 'User saved');
     }
     // public function updating($name , $value)
     // {
@@ -66,6 +67,8 @@ class UsersTable extends Component
     public function  deleteUsers(array $ids)
     {
         User::destroy($ids);
-        
+        $this->selection = [];
+        session()->flash('success' , 'User(s) destroyed');
+
     }
 }

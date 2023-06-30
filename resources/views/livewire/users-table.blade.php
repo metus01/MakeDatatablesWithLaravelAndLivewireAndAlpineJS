@@ -1,6 +1,10 @@
 <div x-data="{selection:@entangle('selection')}">
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
-
+    @if (session()->has('success'))
+    <div class="alert alert-info" role="alert">
+        {{ session('success') }}
+      </div>
+    @endif
     <nav class="navbar bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
