@@ -7,7 +7,7 @@
     </nav>
     <div class="container">
 
-        <input class=" mt-4 mb-4 form-control" placeholder="Rechercher" type="text" wire:model='search'>
+        <input class=" mt-4 mb-4 form-control" placeholder="Rechercher" type="text" wire:model.debounce.500ms='search'>
     </div>
     <div class=" mt-4 mb-4 container table-responsive">
         <table class="table table-striped">
@@ -35,5 +35,6 @@
                 @endforeach
             </tbody>
         </table>
+        {{ $users->links() }}
     </div>
 </div>

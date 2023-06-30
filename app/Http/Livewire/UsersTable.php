@@ -9,12 +9,16 @@ class UsersTable extends Component
 {
     // public $users = [];
     public string $search  = '';
+
+    protected $queryString = [
+        'search' => ['except' , '' ]
+    ];
     public function render()
     {
         return view('livewire.users-table' ,
     [
         'users' => User::
-        where('name', 'LIKE', "%{$this->search}%")->get(),
+        where('name', 'LIKE', "%{$this->search}%")->paginate(5),
     ]);
     }
 }
