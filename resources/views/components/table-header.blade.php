@@ -2,9 +2,9 @@
     {{ $label }}
     @if ($visible)
         @if ($direction === 'ASC')
-            <ion-icon name="caret-up-outline"></ion-icon>
+        <ion-icon name="arrow-dropdown"></ion-icon>
         @else
-            <ion-icon name="caret-down-outline"></ion-icon>
+        <ion-icon name="arrow-dropup"></ion-icon>
         @endif
     @endif
 </th>
