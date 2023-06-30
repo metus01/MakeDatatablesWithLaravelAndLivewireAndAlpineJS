@@ -13,12 +13,18 @@ class UsersTable extends Component
     protected $queryString = [
         'search' => ['except' , '' ]
     ];
+    public string $orderField = 'name';
+    public string $orderDirection = 'ASC';
+    public function paginationView()
+    {
+         return 'livewire.pagination';
+    }
     public function render()
     {
         return view('livewire.users-table' ,
     [
         'users' => User::
-        where('name', 'LIKE', "%{$this->search}%")->paginate(5),
+        where('name', 'LIKE', "%{$this->search}%")->paginate(2),
     ]);
     }
 }
