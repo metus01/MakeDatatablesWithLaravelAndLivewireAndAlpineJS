@@ -34,7 +34,7 @@ class UsersTable extends Component
     }
     public function startEdit(int $id)
     {
-        
+        $this->editId = $id;
     }
     public function setOrderField(string $name)
     {

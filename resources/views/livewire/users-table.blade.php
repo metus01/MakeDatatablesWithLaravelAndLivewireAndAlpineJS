@@ -6,7 +6,6 @@
         </div>
     </nav>
     <div class="container">
-
         <input class=" mt-4 mb-4 form-control" placeholder="Rechercher" type="text" wire:model.debounce.500ms='search'>
     </div>
     <div class=" mt-4 mb-4 container table-responsive">
@@ -32,7 +31,7 @@
                             wire:click="startEdit({{ $user->id }})" class="btn btn-primary">Editer</button>
                         </td>
                     </tr>
-                    @if ($editId = $user->id)
+                    @if($editId == $user->id)
                     <tr>
                         <td colspan="5">Editer</td>
                     </tr>
