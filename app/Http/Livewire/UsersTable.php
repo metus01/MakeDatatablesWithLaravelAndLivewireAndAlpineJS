@@ -63,4 +63,9 @@ class UsersTable extends Component
     //         $this->resetPage();
     //     }
     // }
+    public function  deleteUsers(array $ids)
+    {
+        User::destroy($ids);
+        
+    }
 }

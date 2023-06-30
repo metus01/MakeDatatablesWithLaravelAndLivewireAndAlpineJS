@@ -1,4 +1,4 @@
-<div>
+<div x-data="{selection:@entangle('selection')}">
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
 
     <nav class="navbar bg-light">
@@ -6,10 +6,10 @@
             <a class="navbar-brand" href="#">Navbar</a>
         </div>
     </nav>
-    @dump($selection)
     <div class="container">
         <input class=" mt-4 mb-4 form-control" placeholder="Rechercher" type="text" wire:model.debounce.500ms='search'>
     </div>
+    <div class="container d-flex justify-content-center align-items-center">  <button class="btn btn-danger" x-show="selection.length > 0" x-on;:click="$wire.deleteUsers(selection)">Supprimer</button></div>
     <div class=" mt-4 mb-4 container table-responsive">
         <table class="table table-striped">
             <thead>
@@ -26,7 +26,7 @@
                     <tr>
                         <td>
                             <input type="checkbox" name="" id=""
-                            wire:model="selection"
+                            x-model="selection"
                             value="{{ $user->id }}">
                         </td>
                         <td class="text text-center">{{ $user->name }}</td>
