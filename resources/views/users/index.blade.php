@@ -15,14 +15,15 @@
         </div>
       </nav>
       <div class="container">
+     
         <input  class=" mt-4 mb-4 form-control" placeholder="Rechercher" type="text">
       </div>
         <div class=" mt-4 mb-4 container table-responsive">
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Title</th>
+                        <th class="text text-center">Name</th>
+                        <th class="text text-center">Title</th>
                         <th>Statut</th>
                         <th>Rôle</th>
                         <th class="text text-end">Actions</th>
