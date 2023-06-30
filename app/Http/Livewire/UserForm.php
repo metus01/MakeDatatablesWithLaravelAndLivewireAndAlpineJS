@@ -15,6 +15,7 @@ class UserForm extends Component
     public function save()
     {
         sleep(3);
+        $this->validate();
     }
     public function render()
     {
