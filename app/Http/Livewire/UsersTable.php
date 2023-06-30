@@ -14,7 +14,7 @@ class UsersTable extends Component
         return view('livewire.users-table' ,
     [
         'users' => User::
-        where('name', 'LIKE', $this->search)->get(),
+        where('name', 'LIKE', "%{$this->search}%")->get(),
     ]);
     }
 }
