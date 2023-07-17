@@ -69,6 +69,5 @@ class UsersTable extends Component
         User::destroy($ids);
         $this->selection = [];
         session()->flash('success' , 'User(s) destroyed');
-
     }
 }
