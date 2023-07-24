@@ -1,4 +1,4 @@
-<div x-data="{selection:@entangle('selection')}">
+<div x-data="{selection:@entangle('selection').defer}">
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
     @if (session()->has('success'))
     <div class="alert alert-info" role="alert">
